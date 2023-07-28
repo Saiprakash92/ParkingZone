@@ -26,7 +26,7 @@ app.use(cors())
 connectDB();
 
 
-app.get('/', isLoggedIn, async (req, res) => {
+app.get('/', ()=> {
     res.json({ message: 'Hello world!'})
 })
 
