@@ -26,9 +26,10 @@ app.use(cors())
 connectDB();
 
 
-app.get('/', ()=> {
-    res.json({ message: 'Hello world!'})
-})
+app.get("/", (req, res) => {
+
+    res.send("This is parking web app");
+  });
 
 app.use("/user", userRouter)
 app.use("/parking", parkingRouter)
