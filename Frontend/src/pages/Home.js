@@ -12,7 +12,7 @@ function Home() {
 
       <div className='container mt-5'>
         <section className='my-5'>
-          <h2>How Rent A Spot Works</h2>
+          <h2>How easeParking Works</h2>
 
           <div className='row mt-4'>
             <div className='col-md-4 text-center'>
