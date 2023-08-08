@@ -1,5 +1,5 @@
 # easeParking
-The objective of Rent a Spot is to establish a platform connecting parking owners in the
+The objective of easeParking is to establish a platform connecting parking owners in the
 community with users seeking affordable parking spaces. This website assists parking owners in
 ren+ng out their additional parking spaces, enabling them to earn extra income. Additionally, it
 facilitates users in finding cost—effec+ve parking spaces. Both users and parking owners must
