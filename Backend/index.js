@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const dotenv=require('dotenv');
 const bodyParser = require("body-parser");
 const { connectDB } = require("./config/db.config");
 const userRouter = require("./controllers/user");
@@ -13,27 +12,21 @@ const spaceRouter = require("./controllers/spaceRouter");
 const cors = require('cors');
 const reviewRouter = require("./controllers/review");
 
-dotenv.config();
 // Set body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 const port = process.env.PORT || 3000;
 
-app.use(cors({
-  origin: 'https://parking-zone-71dj.vercel.app', 
-  methods: 'GET, POST, PUT, DELETE', 
-  allowedHeaders: 'Content-Type, Authorization' 
-}));
+app.use(cors())
 
 // Connect Database
 connectDB();
 
 
-app.get("/", (req, res) => {
-
-    res.send("This is parking web app");
-  });
+app.get('/', isLoggedIn, async (req, res) => {
+    res.json({ message: 'Hello world!'})
+})
 
 app.use("/user", userRouter)
 app.use("/parking", parkingRouter)
