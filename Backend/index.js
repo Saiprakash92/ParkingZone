@@ -19,7 +19,8 @@ app.use(bodyParser.json())
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-    origin:"https://parking-zone-71dj.vercel.app"
+    origin:"https://parking-zone-71dj.vercel.app",
+    credentials:true,
 }))
 
 // Connect Database
