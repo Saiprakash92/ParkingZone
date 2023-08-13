@@ -27,7 +27,9 @@ connectDB();
 app.get('/', isLoggedIn, async (req, res) => {
     res.json({ message: 'Hello world!'})
 })
-
+app.get('/',  (req, res) => {
+    res.json({ message: 'sever is running'})
+})
 app.use("/user", userRouter)
 app.use("/parking", parkingRouter)
 app.use("/paymentMethod", paymentMethodRouter)
