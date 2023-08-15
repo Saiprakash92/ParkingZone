@@ -1,6 +1,6 @@
 import axios from 'axios'
-const BASE_URL = "https://parking-zone-eight.vercel.app/"
-
+// const BASE_URL = "https://parking-zone-eight.vercel.app/"
+const BASE_URL = "http://localhost:5000/"
 export const fetchParkings = async ({ user_id, setParkings }) => {
     try {
         let query = '';
